@@ -25,3 +25,38 @@
 #container a {
   text-decoration: none;
 }
+
+.my-header-title{
+  font-size: 14px !important;
+  padding-top: 0px;
+  margin-top: 0px;
+  border-top: 0px;
+  
+}
+
+.my-header{ 
+  
+  --background: #1d1528;
+  padding: 10px 20px 10px 20px;
+
+  .my-logo{
+    max-width: 180px;
+  }
+  
+}
+
+.my-login-card{
+  max-width: 400px;
+  margin: 20px auto 10px auto;
+}
+
+.my-from-login{
+  
+  ion-input{
+    border: solid 1px red;
+  }
+  
+  
+}
+
+

@@ -1,24 +1,172 @@
 <ion-header [translucent]="true">
 
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar class="ion-text-center my-header-title">
+    Envíos a todo México
   </ion-toolbar>
-  
+
+  <ion-toolbar class="my-header" >
+      
+    <ion-img src="./assets/img/logo_blanco.png" class="my-logo" slot="start"></ion-img>
+
+    <ion-button>
+      Obras
+    </ion-button>
+
+    <ion-button>
+      Artistas
+    </ion-button>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button  >
+        <ion-icon name="person-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button  >
+        <ion-icon name="heart-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button  >
+        <ion-icon name="cart-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+  <!--
   <div id="container">
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
+  -->
+
+  <ion-card class="my-login-card">
+
+    <ion-item class="ion-text-center" lines="none">
+      <ion-label>
+        <ion-text>
+          Iniciar <strong>sesión</strong>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+
+    <form class="my-form-login">      
+      
+      <ion-label>
+        <ion-text>
+          Nombre
+        </ion-text>
+      </ion-label>
+
+      <ion-input></ion-input>
+
+      <ion-label>
+        <ion-text>
+          Contraseña
+        </ion-text>
+      </ion-label>
+
+      <ion-input></ion-input>
+
+      <a href="">
+        Olvidé mi contraseña
+      </a>
+
+      <br>
+      
+      <ion-button>
+        Entrar
+      </ion-button>
+
+    </form>
+    
+  </ion-card>
+
+  <hr>
+
+  <ion-card>
+    <ion-card-content>
+
+      <ion-img src="./assets/img/recortes-29 (1).png"></ion-img>
+
+      <ion-item class="ion-text-center" lines="none">
+        <ion-label>
+          <ion-text>
+            Soy <strong>coleccionista</strong>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+
+      <form class="my-form-login">      
+        
+        <ion-label>
+          <ion-text>
+            Nombre completo
+          </ion-text>
+        </ion-label>
+        <ion-input></ion-input>
+  
+        <ion-label>
+          <ion-text>
+            Tu correo
+          </ion-text>
+        </ion-label>
+        <ion-input></ion-input>
+  
+        <ion-label>
+          <ion-text>
+            contraseña
+          </ion-text>
+        </ion-label>
+        <ion-input></ion-input>
+
+        <ion-label>
+          <ion-text>
+            Repetir contraseña
+          </ion-text>
+        </ion-label>
+        <ion-input></ion-input>
+
+        <ion-item >
+          <ion-checkbox slot="start" ></ion-checkbox>
+          <ion-label>
+            Al registrarme, acepto las <a href="#">Políticas de privacidad</a>  y los <a href="#">Términos y Condiciones.</a>
+          </ion-label>
+        </ion-item>    
+        
+        <ion-button>
+          Entrar
+        </ion-button>
+  
+      </form>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+
+      <ion-img src="./assets/img/recortes-30 (1).png"></ion-img>
+
+      <ion-item>
+        <ion-text>
+          Crea una cuenta para mostrar tus trabajos y darte a conocer como artísta.
+        </ion-text>
+      </ion-item>
+
+      <ion-button>
+        Aplicar ahora
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
 
 </ion-content>
+
