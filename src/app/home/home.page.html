@@ -45,14 +45,14 @@
         <ion-col class="my-col-menu">
           <ion-item lines="none">
             <ion-buttons>
-              <ion-button>
+              <ion-button (click)="presentPopover($event)">
                 <strong>
                   Obras
                 </strong>
                 <ion-icon name="chevron-down-outline"></ion-icon>
               </ion-button>
           
-              <ion-button>
+              <ion-button (click)="presentPopover($event)">
                 <strong>
                   Artistas
                 </strong>

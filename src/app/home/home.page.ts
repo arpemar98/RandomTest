@@ -1,5 +1,7 @@
 import { HostListener, Component } from "@angular/core";
 import { Platform } from '@ionic/angular';
+import { PopoverController } from '@ionic/angular';
+import { PopOverPage} from './pop-over/pop-over.page';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +12,7 @@ export class HomePage {
 
   public windowWidth:number;
 
-  constructor(platform: Platform) {
+  constructor(public popoverController: PopoverController, platform: Platform) {
     platform.ready().then(() => {
       this.windowWidth = platform.width();
     });
@@ -18,6 +20,16 @@ export class HomePage {
 
   @HostListener('window:resize', ['$event']) onResize(event) {
       this.windowWidth = window.innerWidth;
+  }
+
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+      component: PopOverPage,
+      cssClass: 'my-custom-class',
+      event: ev,
+      translucent: true
+    });
+    return await popover.present();
   }
 
 }
