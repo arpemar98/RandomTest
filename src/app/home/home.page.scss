@@ -86,28 +86,80 @@ ion-text{
     border: #e2e2e2 solid 1px;
     border-radius: 5px;
     margin-top: 8px;
+    color: #606060;
+    font-size: 13px;
   }
 }
 
 
-
 .my-two-cards{
 
-  max-width: 55%;
+  max-width: 800px;
   margin: 5px auto 10px auto;
+  background-color: red;
+
+  .my-vertical-hr{
+    border: none;
+    border-left: 1px solid hsla(200, 10%, 50%,100);
+    height: 500px;
+    width: 1px; 
+    display: inline-block;
+    border-color: #d8d8d8;
+    vertical-align: middle;
+    
+  }
+
+  .my-left-account-card{
+    margin-left: 0;
+  }
+  .my-right-account-card{
+    margin-right: 0;
+  }
 
   .my-left-account-card, .my-right-account-card{
 
-    max-width: 300px;
+    vertical-align: middle;
+    max-width: 320px;
     display: inline-block;
-  
-    ion-img{
-      max-width: 80px;
-      margin: 5px auto 10px auto;
+    padding-right: 1%;
+    padding-left: 1%;
+
+    .my-checkbox{
+      
+      margin-top: 0px;
+
+      ion-checkbox{
+        margin-right: 5px;
+        --border-color: #d8d8d8;
+      }
     }
   
-  
-  
+    .my-card-img-right{
+      max-width: 45px;
+    }
+
+    .my-card-img-left{
+      max-width: 80px;
+    }
+
+    ion-img{
+      margin: 5px auto 15px auto;
+    }
+
+    ion-button{
+      max-width: 72%;
+      margin: 10px auto 10px auto;
+    }
+
+    .my-card-text{
+      font-size: 12px;
+      width: 75%;
+      margin: 5px auto 10px auto;
+    }
+
+    .my-terms-text{
+      font-size: 9px;
+    }
   
   }
   

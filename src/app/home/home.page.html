@@ -145,7 +145,7 @@
     <ion-card class="my-left-account-card">
       <ion-card-content>
 
-        <ion-img src="./assets/img/recortes-29 (1).png"></ion-img>
+        <ion-img class="my-card-img-left" src="./assets/img/recortes-29 (1).png"></ion-img>
 
         <ion-item class="ion-text-center" lines="none">
           <ion-label>
@@ -153,6 +153,12 @@
               Soy <strong>coleccionista</strong>
             </ion-text>
           </ion-label>
+        </ion-item>
+
+        <ion-item lines="none" class="ion-text-center">
+          <ion-text class="my-card-text">
+            Crea una cuenta para comprar y conocer las obras de diferentes artistas.
+          </ion-text>
         </ion-item>
 
         <form class="my-form-login">      
@@ -205,15 +211,17 @@
             <ion-input type="text"></ion-input>
           </ion-item>
 
-          <ion-item >
-            <ion-checkbox slot="start" ></ion-checkbox>
-            <ion-label>
-              Al registrarme, acepto las <a href="#">Políticas de privacidad</a>  y los <a href="#">Términos y Condiciones.</a>
+          <ion-item lines="none" class="my-checkbox">
+            <ion-checkbox slot="start"></ion-checkbox>
+            <ion-label class="ion-text-wrap my-terms-text">
+              <ion-text>
+                Al registrarme, acepto las <a href="#">Políticas de privacidad</a>  y los <a href="#">Términos y Condiciones.</a>
+              </ion-text>
             </ion-label>
           </ion-item>    
           
           <ion-button class="my-button" expand="full">
-            Entrar
+            Crear cuenta
           </ion-button>
     
         </form>
@@ -221,10 +229,12 @@
       </ion-card-content>
     </ion-card>
 
+    <hr class="my-vertical-hr">
+
     <ion-card class="my-right-account-card">
       <ion-card-content>
 
-        <ion-img src="./assets/img/recortes-30 (1).png"></ion-img>
+        <ion-img class="my-card-img-right" src="./assets/img/recortes-30 (1).png"></ion-img>
 
         <ion-item class="ion-text-center" lines="none">
           <ion-label>
@@ -234,8 +244,8 @@
           </ion-label>
         </ion-item>
 
-        <ion-item>
-          <ion-text>
+        <ion-item lines="none" class="ion-text-center">
+          <ion-text class="my-card-text">
             Crea una cuenta para mostrar tus trabajos y darte a conocer como artísta.
           </ion-text>
         </ion-item>
