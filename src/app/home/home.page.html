@@ -130,7 +130,7 @@
     
   </ion-card>
 
-  <hr>
+  <hr class="my-horizontal-hr">
 
   <ion-item class="ion-text-center my-title" lines="none">
     <ion-label>
@@ -142,7 +142,9 @@
 
   <div class="my-two-cards">
 
-    <ion-card class="my-left-account-card">
+    <div>
+
+    <ion-card [style]="(this.windowWidth && this.windowWidth < 820)? 'margin-left: auto; margin-right: auto; display:block': ''">
       <ion-card-content>
 
         <ion-img class="my-card-img-left" src="./assets/img/recortes-29 (1).png"></ion-img>
@@ -196,7 +198,7 @@
               </ion-text>  
             </ion-label>
             
-            <ion-input type="text"></ion-input>
+            <ion-input type="password"></ion-input>
           </ion-item>
 
           <ion-item class="my-input-item" lines="none">
@@ -208,7 +210,7 @@
               </ion-text>  
             </ion-label>
             
-            <ion-input type="text"></ion-input>
+            <ion-input type="password"></ion-input>
           </ion-item>
 
           <ion-item lines="none" class="my-checkbox">
@@ -229,9 +231,10 @@
       </ion-card-content>
     </ion-card>
 
-    <hr class="my-vertical-hr">
+    <hr class="my-vertical-hr" *ngIf="this.windowWidth && this.windowWidth >= 820">
+    <hr class="my-horizontal-hr" *ngIf="this.windowWidth && this.windowWidth < 820">
 
-    <ion-card class="my-right-account-card">
+    <ion-card>
       <ion-card-content>
 
         <ion-img class="my-card-img-right" src="./assets/img/recortes-30 (1).png"></ion-img>
@@ -258,6 +261,7 @@
     </ion-card>
 
 
+  </div>
   </div>
 
 </ion-content>
