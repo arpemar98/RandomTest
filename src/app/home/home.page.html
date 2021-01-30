@@ -1,4 +1,32 @@
-<ion-header [translucent]="true">
+<ion-menu side="end" content-id="myPage" menuId="myMenu">
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button>
+        <ion-icon name="search-outline" slot="start"></ion-icon>
+        <ion-label>Search</ion-label>
+      </ion-item>
+      <ion-item button>
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </ion-item>
+      <ion-item button>
+        <ion-icon name="heart-outline" slot="start"></ion-icon>
+        <ion-label>Likes</ion-label>
+      </ion-item>
+      <ion-item button>
+        <ion-icon name="cart-outline" slot="start"></ion-icon>
+        <ion-label>Car</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header >
 
   <ion-toolbar class="my-header">
 
@@ -10,8 +38,8 @@
 
       <ion-row no-padding no-margin>
 
-        <ion-col class="my-col-logo">
-          <ion-img src="./assets/img/logo_blanco.png" class="my-logo"></ion-img>
+        <ion-col class="my-col-logo" >
+          <app-logo [img] = "(this.windowWidth >= 550)? 'big' : 'small' "></app-logo>
         </ion-col>
 
         <ion-col class="my-col-menu">
@@ -34,24 +62,16 @@
           </ion-item>
         </ion-col>
 
-        <ion-col class="my-col-social">
+        <ion-col>
 
-          <ion-item>
-            <ion-buttons>
-              <ion-button size="small">
-                <ion-img src="assets/img/recortes-57 (1).png"></ion-img>
-              </ion-button>
-              <ion-button size="small">
-                <ion-img src="assets/img/recortes-58 (1).png"></ion-img>
-              </ion-button>
-              <ion-button size="small">
-                <ion-img src="assets/img/recortes-60 (1).png"></ion-img>
-              </ion-button>
-              <ion-button size="small">
-                <ion-img src="assets/img/recortes-59 (1).png"></ion-img>
-              </ion-button>
-            </ion-buttons>     
-          </ion-item>
+          <app-options *ngIf="this.windowWidth && this.windowWidth >= 620; else optionsDown"></app-options>
+          
+          <ng-template #optionsDown>
+            <ion-buttons >
+              <ion-menu-button #myMenu style="margin-right: 8px; margin-left: auto;">
+              </ion-menu-button>
+            </ion-buttons>
+          </ng-template>
 
         </ion-col>
 
@@ -62,14 +82,7 @@
 
 </ion-header>
 
-<ion-content [fullscreen]="true">
-
-  <!--
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-  -->
+<ion-content [fullscreen]="true" id="myPage">
 
   <ion-card class="my-login-card">
 
@@ -127,84 +140,114 @@
     </ion-label>
   </ion-item>
 
-  <ion-card class="my-account-card">
-    <ion-card-content>
+  <div class="my-two-cards">
 
-      <ion-img src="./assets/img/recortes-29 (1).png"></ion-img>
+    <ion-card class="my-left-account-card">
+      <ion-card-content>
 
-      <ion-item class="ion-text-center" lines="none">
-        <ion-label>
-          <ion-text>
-            Soy <strong>coleccionista</strong>
-          </ion-text>
-        </ion-label>
-      </ion-item>
+        <ion-img src="./assets/img/recortes-29 (1).png"></ion-img>
 
-      <form class="my-form-login">      
-        
-        <ion-label>
-          <ion-text>
-            Nombre completo
-          </ion-text>
-        </ion-label>
-        <ion-input></ion-input>
-  
-        <ion-label>
-          <ion-text>
-            Tu correo
-          </ion-text>
-        </ion-label>
-        <ion-input></ion-input>
-  
-        <ion-label>
-          <ion-text>
-            contraseña
-          </ion-text>
-        </ion-label>
-        <ion-input></ion-input>
-
-        <ion-label>
-          <ion-text>
-            Repetir contraseña
-          </ion-text>
-        </ion-label>
-        <ion-input></ion-input>
-
-        <ion-item >
-          <ion-checkbox slot="start" ></ion-checkbox>
+        <ion-item class="ion-text-center" lines="none">
           <ion-label>
-            Al registrarme, acepto las <a href="#">Políticas de privacidad</a>  y los <a href="#">Términos y Condiciones.</a>
+            <ion-text>
+              Soy <strong>coleccionista</strong>
+            </ion-text>
           </ion-label>
-        </ion-item>    
-        
+        </ion-item>
+
+        <form class="my-form-login">      
+          
+          <ion-item class="my-input-item" lines="none">
+            <ion-label position="stacked">
+              <ion-text>
+                <strong>
+                  Nombre completo
+                </strong>
+              </ion-text>  
+            </ion-label>
+            
+            <ion-input type="text"></ion-input>
+          </ion-item>
+    
+          <ion-item class="my-input-item" lines="none">
+            <ion-label position="stacked">
+              <ion-text>
+                <strong>
+                  Tu correo
+                </strong>
+              </ion-text>  
+            </ion-label>
+            
+            <ion-input type="text"></ion-input>
+          </ion-item>
+    
+          <ion-item class="my-input-item" lines="none">
+            <ion-label position="stacked">
+              <ion-text>
+                <strong>
+                  Contraseña
+                </strong>
+              </ion-text>  
+            </ion-label>
+            
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+          <ion-item class="my-input-item" lines="none">
+            <ion-label position="stacked">
+              <ion-text>
+                <strong>
+                  Repetir contraseña
+                </strong>
+              </ion-text>  
+            </ion-label>
+            
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+          <ion-item >
+            <ion-checkbox slot="start" ></ion-checkbox>
+            <ion-label>
+              Al registrarme, acepto las <a href="#">Políticas de privacidad</a>  y los <a href="#">Términos y Condiciones.</a>
+            </ion-label>
+          </ion-item>    
+          
+          <ion-button class="my-button" expand="full">
+            Entrar
+          </ion-button>
+    
+        </form>
+
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="my-right-account-card">
+      <ion-card-content>
+
+        <ion-img src="./assets/img/recortes-30 (1).png"></ion-img>
+
+        <ion-item class="ion-text-center" lines="none">
+          <ion-label>
+            <ion-text>
+              Soy <strong>artista</strong>
+            </ion-text>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-text>
+            Crea una cuenta para mostrar tus trabajos y darte a conocer como artísta.
+          </ion-text>
+        </ion-item>
+
         <ion-button class="my-button" expand="full">
-          Entrar
+          Aplicar ahora
         </ion-button>
-  
-      </form>
 
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card class="my-account-card">
-    <ion-card-content>
-
-      <ion-img src="./assets/img/recortes-30 (1).png"></ion-img>
-
-      <ion-item>
-        <ion-text>
-          Crea una cuenta para mostrar tus trabajos y darte a conocer como artísta.
-        </ion-text>
-      </ion-item>
-
-      <ion-button class="my-button" expand="full">
-        Aplicar ahora
-      </ion-button>
-
-    </ion-card-content>
-  </ion-card>
+      </ion-card-content>
+    </ion-card>
 
 
-
+  </div>
 
 </ion-content>

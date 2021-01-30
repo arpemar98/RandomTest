@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { HostListener, Component } from "@angular/core";
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +8,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {
-    
+  public windowWidth:number;
+
+  constructor(platform: Platform) {
+    platform.ready().then(() => {
+      this.windowWidth = platform.width();
+    });
+  }
+
+  @HostListener('window:resize', ['$event']) onResize(event) {
+      this.windowWidth = window.innerWidth;
   }
 
 }

@@ -1,0 +1,16 @@
+ion-item{
+    --background: transparent;
+    color: white;
+
+    ion-buttons{         
+
+        margin-left: auto;
+        margin-right: 25px;
+
+        ion-button{
+            ion-img{
+                max-width: 16px;
+            }
+        }
+    }
+}
