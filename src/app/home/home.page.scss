@@ -38,21 +38,81 @@ a{
 hr {
   //border: 1px solid red !important;
   background-color: #d8d8d8;
-  max-width: 80%;
+  max-width: 75%;
   visibility: visible !important;
+  margin: 10px auto 15px auto;
 }
 
+ion-button{
+  text-transform:none !important;
+  --box-shadow:none;
+}
 
+ion-text{
+  color: #606060;
+}
+
+// CLASES
 
 .my-header{ 
-  
-  --background: #1d1528;
-  padding: 10px 20px 10px 20px;
 
-  .my-logo{
-    max-width: 180px;
+  --background: #1d1528;
+  color: white;
+
+  ion-title{
+    font-size: 12px;
+    padding-top: 12px;
+    margin-bottom: 0px;
   }
-  
+
+  ion-grid{
+    padding-bottom: 10px;
+
+    .my-col-logo{
+      ion-img{
+        margin-left: 20px;
+        max-width: 190px;
+      }
+    }
+
+    .my-col-menu{
+      
+      ion-item{
+        --background: transparent;
+        color: white;
+        font-size: 20px;
+
+        ion-buttons{
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    .my-col-social{
+
+      ion-item{
+        --background: transparent;
+        color: white;
+        
+        ion-buttons{
+          margin-right: 26px;
+          margin-left: auto;
+
+          ion-button{
+            ion-img{
+            max-width: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.my-title{
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .my-login-card{
@@ -60,20 +120,13 @@ hr {
   max-width: 300px;
   margin: 30px auto 30px auto;
   padding-top: 20px;  
-  //box-shadow: none !important;// IMPORTANT....
+  box-shadow: none !important;// IMPORTANT....
 
-  ion-text{
-    color: #606060;
-  }
-
-  .my-card-header{
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
+  
 
   .my-input-item{
     ion-text{
-      margin-left: 15px;
+      margin-left: 16px;
       font-size: 14px;
     }
     ion-input{
@@ -86,8 +139,6 @@ hr {
   .my-button{
     max-width: 80%;
     margin: 5px auto 10px auto;
-    text-transform:none !important;
-    --box-shadow:none;
   }
 
 }

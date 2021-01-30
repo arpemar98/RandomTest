@@ -17,9 +17,7 @@
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #e03be0;
-  --ion-color-primary-tint: #e03be0;
-
-  
+  --ion-color-primary-tint: #e03be0;  
 
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
@@ -172,6 +170,7 @@
    * -------------------------------------------
    */
 
+   /*
   .ios body {
     --ion-background-color: #000000;
     --ion-background-color-rgb: 0,0,0;
@@ -205,6 +204,7 @@
 
     --ion-card-background: #1c1c1d;
   }
+  */
 
 
   /*
@@ -212,6 +212,7 @@
    * -------------------------------------------
    */
 
+   /*
   .md body {
     --ion-background-color: #121212;
     --ion-background-color-rgb: 18,18,18;
@@ -249,4 +250,5 @@
 
     --ion-card-background: #1e1e1e;
   }
+  */
 }
