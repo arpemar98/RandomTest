@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LogoComponent} from './logo/logo.component';
 import { OptionsComponent } from './options/options.component';
+import { IonicModule } from '@ionic/angular';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { OptionsComponent } from './options/options.component';
     OptionsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IonicModule
   ],
   exports: [
     LogoComponent,

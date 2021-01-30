@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { MyComponentsModule } from '../components/my-components.module';
+import { PopOverPageModule } from './pop-over/pop-over.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { MyComponentsModule } from '../components/my-components.module';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    MyComponentsModule
+    MyComponentsModule,
+    PopOverPageModule
   ],
   declarations: [HomePage]
 })

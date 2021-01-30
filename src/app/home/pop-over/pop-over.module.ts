@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PopOverPageRoutingModule } from './pop-over-routing.module';
 
 import { PopOverPage } from './pop-over.page';
+import { MyComponentsModule } from '../../components/my-components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PopOverPageRoutingModule
+    PopOverPageRoutingModule,
+    MyComponentsModule
   ],
   declarations: [PopOverPage]
 })
