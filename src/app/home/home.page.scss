@@ -1,4 +1,4 @@
-#container {
+/*#container {
   text-align: center;
 
   position: absolute;
@@ -24,15 +24,25 @@
 
 #container a {
   text-decoration: none;
+}*/
+
+
+// GENERAL TAGS
+
+a{
+  color :#e03be0;
+  font-weight: bold;
+  font-size: 11px;
 }
 
-.my-header-title{
-  font-size: 14px !important;
-  padding-top: 0px;
-  margin-top: 0px;
-  border-top: 0px;
-  
+hr {
+  //border: 1px solid red !important;
+  background-color: #d8d8d8;
+  max-width: 80%;
+  visibility: visible !important;
 }
+
+
 
 .my-header{ 
   
@@ -46,17 +56,53 @@
 }
 
 .my-login-card{
-  max-width: 400px;
-  margin: 20px auto 10px auto;
+  
+  max-width: 300px;
+  margin: 30px auto 30px auto;
+  padding-top: 20px;  
+  //box-shadow: none !important;// IMPORTANT....
+
+  ion-text{
+    color: #606060;
+  }
+
+  .my-card-header{
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .my-input-item{
+    ion-text{
+      margin-left: 15px;
+      font-size: 14px;
+    }
+    ion-input{
+      border: #e2e2e2 solid 1px;
+      border-radius: 5px;
+      margin-top: 8px;
+    }
+  }
+
+  .my-button{
+    max-width: 80%;
+    margin: 5px auto 10px auto;
+    text-transform:none !important;
+    --box-shadow:none;
+  }
+
 }
 
-.my-from-login{
-  
-  ion-input{
-    border: solid 1px red;
+
+
+
+.my-account-card{
+
+  ion-img{
+    max-width: 100px;
   }
-  
-  
+
+
 }
+
 
 

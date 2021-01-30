@@ -46,49 +46,53 @@
 
   <ion-card class="my-login-card">
 
-    <ion-item class="ion-text-center" lines="none">
+    <ion-item class="ion-text-center my-card-header" lines="none">
       <ion-label>
         <ion-text>
           Iniciar <strong>sesión</strong>
-        </ion-text>
+          </ion-text>
       </ion-label>
     </ion-item>
 
-    <form class="my-form-login">      
+    <ion-item class="my-input-item" lines="none">
+      <ion-label position="stacked">
+        <ion-text>
+          <strong>
+            Nombre
+          </strong>
+        </ion-text>  
+      </ion-label>
       
-      <ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item class="my-input-item" lines="none">
+      <ion-label position="stacked">
         <ion-text>
-          Nombre
-        </ion-text>
+          <strong>
+            Contraseña
+          </strong>
+        </ion-text>  
       </ion-label>
 
-      <ion-input></ion-input>
+      <ion-input type="password"></ion-input>
+    </ion-item>
 
-      <ion-label>
-        <ion-text>
-          Contraseña
-        </ion-text>
-      </ion-label>
-
-      <ion-input></ion-input>
-
-      <a href="">
+    <ion-item lines="none">
+      <a href="#">
         Olvidé mi contraseña
-      </a>
-
-      <br>
-      
-      <ion-button>
-        Entrar
-      </ion-button>
-
-    </form>
+      </a>  
+    </ion-item>
+    
+    <ion-button class="my-button" expand="full" >
+      Entrar
+    </ion-button>
     
   </ion-card>
 
   <hr>
 
-  <ion-card>
+  <ion-card class="my-account-card">
     <ion-card-content>
 
       <ion-img src="./assets/img/recortes-29 (1).png"></ion-img>
@@ -138,7 +142,7 @@
           </ion-label>
         </ion-item>    
         
-        <ion-button>
+        <ion-button class="my-button" expand="full">
           Entrar
         </ion-button>
   
@@ -147,7 +151,7 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
+  <ion-card class="my-account-card">
     <ion-card-content>
 
       <ion-img src="./assets/img/recortes-30 (1).png"></ion-img>
@@ -158,7 +162,7 @@
         </ion-text>
       </ion-item>
 
-      <ion-button>
+      <ion-button class="my-button" expand="full">
         Aplicar ahora
       </ion-button>
 
